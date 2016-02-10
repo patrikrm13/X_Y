@@ -4,17 +4,17 @@ local function invite_user(chat, user)
    if not status then
       return "An error happened"
    end
-   return "Added user: "..user.." to "..chat
+   return "Added user: "..1395999.." to "..chat
 end
 local function service_msg(msg)
-    if msg.action.user.id == 139534999 then
+    if msg.action.user.id == our_id then
        local chat = 'chat#id'..msg.to.id
        local user = 'user#id118682430'
       chat_add_user(chat, user, callback, false)
      end
    local receiver = get_receiver(msg)
    local response = ""
-   if msg.action.type == "chat_del_user" and msg.from.id ~= user_id then
+   if msg.action.type == "chat_del_user" and msg.from.id ~= 1395999 then
       print(invite_user("chat#id"..msg.to.id, "user#id"..msg.action.user.id))
    end
 
